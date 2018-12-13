@@ -36,40 +36,52 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="TSz-kR-zgF"/>
                                 </connections>
                             </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="mno-uV-Ii4">
-                                <rect key="frame" x="16" y="172" width="345" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="5" maxValue="70" translatesAutoresizingMaskIntoConstraints="NO" id="j6o-qe-3DR">
-                                        <rect key="frame" x="-2" y="0.0" width="307" height="31"/>
-                                        <color key="minimumTrackTintColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <action selector="ageSlider:" destination="9pv-A4-QxB" eventType="valueChanged" id="qKE-ls-GxJ"/>
-                                        </connections>
-                                    </slider>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnd-5F-Cu0">
-                                        <rect key="frame" x="324" y="5" width="21" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="5" maxValue="70" translatesAutoresizingMaskIntoConstraints="NO" id="j6o-qe-3DR">
+                                <rect key="frame" x="14" y="172" width="309" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.50196081400000003" green="0.0" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="ageSlider:" destination="9pv-A4-QxB" eventType="valueChanged" id="qKE-ls-GxJ"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnd-5F-Cu0">
+                                <rect key="frame" x="338" y="172" width="21" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIF-Su-gpl">
+                                <rect key="frame" x="40" y="263" width="295" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Validar datos"/>
+                                <connections>
+                                    <action selector="validaDatos:" destination="9pv-A4-QxB" eventType="touchUpInside" id="hvf-JJ-pku"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="yaF-D4-OAW" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="Dzw-Nb-cYg"/>
                             <constraint firstItem="x5L-o2-Px7" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="IA0-l3-HMI"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="yaF-D4-OAW" secondAttribute="trailing" constant="16" id="Mfn-DB-I5s"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="MIF-Su-gpl" secondAttribute="trailing" constant="40" id="Ocv-hH-Mj3"/>
+                            <constraint firstItem="nnd-5F-Cu0" firstAttribute="top" secondItem="yaF-D4-OAW" secondAttribute="bottom" constant="18" id="Qqf-Wb-qLX"/>
+                            <constraint firstItem="j6o-qe-3DR" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="16" id="U96-wU-Ikw"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="x5L-o2-Px7" secondAttribute="trailing" constant="16" id="Xfj-pt-Om9"/>
+                            <constraint firstItem="j6o-qe-3DR" firstAttribute="top" secondItem="yaF-D4-OAW" secondAttribute="bottom" constant="18" id="b0X-Se-sUf"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="MIF-Su-gpl" secondAttribute="bottom" constant="427" id="beY-Lc-0xp"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="nnd-5F-Cu0" secondAttribute="trailing" constant="16" id="euW-4n-KY2"/>
                             <constraint firstItem="x5L-o2-Px7" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="30" id="mbU-kL-a6z"/>
+                            <constraint firstItem="nnd-5F-Cu0" firstAttribute="leading" secondItem="j6o-qe-3DR" secondAttribute="trailing" constant="17" id="n4h-JV-ijd"/>
+                            <constraint firstItem="nnd-5F-Cu0" firstAttribute="leading" secondItem="j6o-qe-3DR" secondAttribute="trailing" constant="17" id="rbT-Ho-XbQ"/>
                             <constraint firstItem="yaF-D4-OAW" firstAttribute="top" secondItem="x5L-o2-Px7" secondAttribute="bottom" constant="20" id="xI2-0W-t9m"/>
+                            <constraint firstItem="MIF-Su-gpl" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="40" id="zIt-SV-9sB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="ageLabel" destination="nnd-5F-Cu0" id="e9g-9A-EDs"/>
+                        <outlet property="nameText" destination="x5L-o2-Px7" id="23l-L7-xtT"/>
                         <outlet property="sliderAger" destination="j6o-qe-3DR" id="qdr-Mn-n6y"/>
                     </connections>
                 </viewController>

@@ -13,6 +13,7 @@
 		4D36FDFA21C1E03100A0A5D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D36FDF821C1E03100A0A5D8 /* Main.storyboard */; };
 		4D36FDFC21C1E03300A0A5D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D36FDFB21C1E03300A0A5D8 /* Assets.xcassets */; };
 		4D36FDFF21C1E03300A0A5D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D36FDFD21C1E03300A0A5D8 /* LaunchScreen.storyboard */; };
+		4D36FE0721C1E2C500A0A5D8 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D36FE0621C1E2C500A0A5D8 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4D36FDFB21C1E03300A0A5D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D36FDFE21C1E03300A0A5D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D36FE0021C1E03300A0A5D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D36FE0621C1E2C500A0A5D8 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +59,23 @@
 			isa = PBXGroup;
 			children = (
 				4D36FDF221C1E03100A0A5D8 /* AppDelegate.swift */,
-				4D36FDF421C1E03100A0A5D8 /* FirstViewController.swift */,
-				4D36FDF621C1E03100A0A5D8 /* SecondViewController.swift */,
+				4D36FE0821C1E43E00A0A5D8 /* Controllers */,
 				4D36FDF821C1E03100A0A5D8 /* Main.storyboard */,
 				4D36FDFB21C1E03300A0A5D8 /* Assets.xcassets */,
 				4D36FDFD21C1E03300A0A5D8 /* LaunchScreen.storyboard */,
 				4D36FE0021C1E03300A0A5D8 /* Info.plist */,
 			);
 			path = 03_coding;
+			sourceTree = "<group>";
+		};
+		4D36FE0821C1E43E00A0A5D8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4D36FDF421C1E03100A0A5D8 /* FirstViewController.swift */,
+				4D36FDF621C1E03100A0A5D8 /* SecondViewController.swift */,
+				4D36FE0621C1E2C500A0A5D8 /* ThirdViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 			files = (
 				4D36FDF721C1E03100A0A5D8 /* SecondViewController.swift in Sources */,
 				4D36FDF321C1E03100A0A5D8 /* AppDelegate.swift in Sources */,
+				4D36FE0721C1E2C500A0A5D8 /* ThirdViewController.swift in Sources */,
 				4D36FDF521C1E03100A0A5D8 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,7 +305,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "synapsis.com.mx.-3-coding";
+				PRODUCT_BUNDLE_IDENTIFIER = synapsis.com.mx.coding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -311,7 +323,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "synapsis.com.mx.-3-coding";
+				PRODUCT_BUNDLE_IDENTIFIER = synapsis.com.mx.coding;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";

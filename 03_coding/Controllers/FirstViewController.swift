@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class FirstViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,5 +16,17 @@ class FirstViewController: UIViewController {
     }
 
 
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+   
+        if let theText = textField.text {
+            print(theText)
+        }
+        
+        return true
+        
+    }
+    
 }
 

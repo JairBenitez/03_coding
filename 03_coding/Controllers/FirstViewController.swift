@@ -10,9 +10,16 @@ import UIKit
 
 class FirstViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var ageLabel: UILabel!
+    
+    @IBOutlet weak var sliderAger: UISlider!
+    
+    var userAge : Int = -1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        updateAgeLabel()
     }
 
 
@@ -28,5 +35,17 @@ class FirstViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    @IBAction func ageSlider(_ sender: UISlider) {
+        
+        updateAgeLabel()
+    }
+    
+    
+    
+    func updateAgeLabel() {
+        
+        userAge = Int( self.sliderAger.value )
+        self.ageLabel.text = "\(userAge)"
+    }
 }
 

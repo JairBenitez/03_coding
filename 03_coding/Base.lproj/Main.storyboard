@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Party-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="_3_coding" customModuleProvider="target" sceneMemberID="viewController">
@@ -78,7 +78,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Party" image="first" id="acW-dT-cKf"/>
                     <connections>
                         <outlet property="ageLabel" destination="nnd-5F-Cu0" id="e9g-9A-EDs"/>
                         <outlet property="nameText" destination="x5L-o2-Px7" id="23l-L7-xtT"/>
@@ -89,7 +89,7 @@
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="-320.68965517241378"/>
         </scene>
-        <!--Third-->
+        <!--Fonts-->
         <scene sceneID="Udj-i0-FJG">
             <objects>
                 <viewController id="CLe-Fi-6A0" customClass="ThirdViewController" customModule="_3_coding" customModuleProvider="target" sceneMemberID="viewController">
@@ -138,7 +138,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="J2a-ni-W2a"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Third" image="first" id="JDT-wy-9Ua"/>
+                    <tabBarItem key="tabBarItem" title="Fonts" image="first" id="JDT-wy-9Ua"/>
                     <connections>
                         <outlet property="tableView" destination="pPX-CD-mb3" id="YVK-jO-HXY"/>
                     </connections>
@@ -214,7 +214,7 @@
             </objects>
             <point key="canvasLocation" x="2655.1999999999998" y="1118.7192118226601"/>
         </scene>
-        <!--Second-->
+        <!--Fibonacci-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="_3_coding" customModuleProvider="target" sceneMemberID="viewController">
@@ -300,7 +300,7 @@ de fibonacci quieres ver</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Fibonacci" image="second" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="fibResult" destination="Q2H-UU-HxV" id="eje-m6-ViC"/>
                         <outlet property="labelStep" destination="D4b-MQ-hn1" id="G4w-3j-uCM"/>

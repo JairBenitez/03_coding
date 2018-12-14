@@ -123,34 +123,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="86.666666666666671" y="384.66666666666669" width="201.66666666666663" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UZB-5x-jjs">
+                                <rect key="frame" x="40" y="84" width="295" height="40.666666666666657"/>
+                                <string key="text">Seleccione cuantos números
+de fibonacci quieres ver</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="80" y="435.66666666666669" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Nge-52-HdK">
+                                <rect key="frame" x="30" y="154.66666666666666" width="315" height="40"/>
+                                <subviews>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minimumValue="2" maximumValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="47w-5j-LVQ">
+                                        <rect key="frame" x="0.0" y="5.6666666666666856" width="94" height="29"/>
+                                        <connections>
+                                            <action selector="steperControl:" destination="8rJ-Kc-sve" eventType="valueChanged" id="Hx9-v8-VNh"/>
+                                        </connections>
+                                    </stepper>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4b-MQ-hn1">
+                                        <rect key="frame" x="119" y="9.9999999999999982" width="196" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nE3-YG-Wgo"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Q2H-UU-HxV">
+                                <rect key="frame" x="16" y="234.66666666666666" width="343" height="454.33333333333337"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="UZB-5x-jjs" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="40" id="6CI-Uf-4B2"/>
+                            <constraint firstItem="Q2H-UU-HxV" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="16" id="6Yy-mY-Tp1"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="Q2H-UU-HxV" secondAttribute="trailing" constant="16" id="B6M-rw-fGT"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="Nge-52-HdK" secondAttribute="trailing" constant="30" id="LWX-6a-FTv"/>
+                            <constraint firstItem="UZB-5x-jjs" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="NHB-Yt-QxZ"/>
+                            <constraint firstItem="Nge-52-HdK" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="30" id="SAe-kp-BZI"/>
+                            <constraint firstItem="Nge-52-HdK" firstAttribute="top" secondItem="UZB-5x-jjs" secondAttribute="bottom" constant="30" id="YIp-qh-Lp7"/>
+                            <constraint firstItem="Nge-52-HdK" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="lpK-QT-VTy"/>
+                            <constraint firstItem="UZB-5x-jjs" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="40" id="m57-ho-tYH"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="UZB-5x-jjs" secondAttribute="trailing" constant="40" id="moZ-uk-VFV"/>
+                            <constraint firstItem="Q2H-UU-HxV" firstAttribute="top" secondItem="Nge-52-HdK" secondAttribute="bottom" constant="40" id="xbV-S5-8O2"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="Q2H-UU-HxV" secondAttribute="bottom" constant="40" id="ymi-Iq-I4G"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="fibResult" destination="Q2H-UU-HxV" id="eje-m6-ViC"/>
+                        <outlet property="labelStep" destination="D4b-MQ-hn1" id="G4w-3j-uCM"/>
+                        <outlet property="steper" destination="47w-5j-LVQ" id="WVL-mf-snu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="749.60000000000002" y="359.85221674876851"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D35FDBC21C424850064A247 /* FontDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D35FDBB21C424850064A247 /* FontDetailsViewController.swift */; };
+		4D35FDBE21C439440064A247 /* ImcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D35FDBD21C439440064A247 /* ImcViewController.swift */; };
 		4D36FDF321C1E03100A0A5D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D36FDF221C1E03100A0A5D8 /* AppDelegate.swift */; };
 		4D36FDF521C1E03100A0A5D8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D36FDF421C1E03100A0A5D8 /* FirstViewController.swift */; };
 		4D36FDF721C1E03100A0A5D8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D36FDF621C1E03100A0A5D8 /* SecondViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		4D35FDBB21C424850064A247 /* FontDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontDetailsViewController.swift; sourceTree = "<group>"; };
+		4D35FDBD21C439440064A247 /* ImcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImcViewController.swift; sourceTree = "<group>"; };
 		4D36FDEF21C1E03100A0A5D8 /* 03_coding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 03_coding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D36FDF221C1E03100A0A5D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D36FDF421C1E03100A0A5D8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				4D36FDF621C1E03100A0A5D8 /* SecondViewController.swift */,
 				4D36FE0621C1E2C500A0A5D8 /* ThirdViewController.swift */,
 				4D35FDBB21C424850064A247 /* FontDetailsViewController.swift */,
+				4D35FDBD21C439440064A247 /* ImcViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 			files = (
 				4D36FDF721C1E03100A0A5D8 /* SecondViewController.swift in Sources */,
 				4D36FDF321C1E03100A0A5D8 /* AppDelegate.swift in Sources */,
+				4D35FDBE21C439440064A247 /* ImcViewController.swift in Sources */,
 				4D35FDBC21C424850064A247 /* FontDetailsViewController.swift in Sources */,
 				4D36FE0721C1E2C500A0A5D8 /* ThirdViewController.swift in Sources */,
 				4D36FDF521C1E03100A0A5D8 /* FirstViewController.swift in Sources */,

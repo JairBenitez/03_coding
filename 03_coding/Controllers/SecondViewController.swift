@@ -13,9 +13,11 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var labelStep: UILabel!
     @IBOutlet weak var fibResult: UITextView!
     @IBOutlet weak var steper: UIStepper!
+    @IBOutlet weak var labelSwitch: UILabel!
     
     var fibonacci : [Int] = [0, 1]
     var fibId = 0
+    var wantsGoldNum = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,25 @@ class SecondViewController: UIViewController {
     }
 
 
+    
+    
+    @IBAction func steperControl(_ sender: UIStepper) {
+        
+    
+        actualizaEtiquetas( n: Int( sender.value ) )
+        
+    }
+    
+    
+    @IBAction func switchMoved(_ sender: UISwitch) {
+        
+        wantsGoldNum = sender.isOn
+        calculaNumeroDeOro()
+        
+    }
+    
+    
+    
     func genraFibNumber( ) {
         
         if( fibId <= 1 || fibId >= 20 ) {
@@ -46,12 +67,7 @@ class SecondViewController: UIViewController {
         
     }
     
-    @IBAction func steperControl(_ sender: UIStepper) {
-        
     
-        actualizaEtiquetas( n: Int( sender.value ) )
-        
-    }
     
     func actualizaEtiquetas(n: Int) {
         
@@ -59,6 +75,27 @@ class SecondViewController: UIViewController {
         labelStep.text = "\(fibId)"
         
         genraFibNumber()
+        calculaNumeroDeOro()
+        
+    }
+    
+    
+   
+    func calculaNumeroDeOro() {
+        
+        if wantsGoldNum {
+            
+            let ultimo = Double( fibonacci[fibonacci.count - 1] )
+            let anterior = Double( fibonacci[fibonacci.count - 2] )
+            let goldNum = ultimo / anterior
+            
+            labelSwitch.text = "\(goldNum)"
+            
+        } else {
+            
+            labelSwitch.text = "Ver el número de oro"
+            
+        }
     }
     
 }

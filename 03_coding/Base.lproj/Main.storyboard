@@ -117,6 +117,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="oxP-eZ-KVV" kind="show" identifier="ShowFontsForFamily" id="YZa-Ug-0G2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -143,6 +146,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qGd-PE-y5H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="749.60000000000002" y="1118.7192118226601"/>
+        </scene>
+        <!--Detalle de la fuente-->
+        <scene sceneID="qRT-sy-1C8">
+            <objects>
+                <viewController id="cLB-6t-p0d" customClass="FontDetailsViewController" customModule="_3_coding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yhk-ew-H4w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titulo Aqui" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vny-yM-IOK">
+                                <rect key="frame" x="16" y="128" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dmr-Gk-Pm0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CrA-Fr-mZc">
+                                <rect key="frame" x="16" y="188" width="343" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="4pz-n3-FA4"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5dz-JH-FVi">
+                                <rect key="frame" x="16" y="388" width="343" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="cLB-6t-p0d" id="HTb-qE-S9r"/>
+                                    <outlet property="delegate" destination="cLB-6t-p0d" id="sKg-KR-Gv7"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hmx-6U-gnF" firstAttribute="trailing" secondItem="Vny-yM-IOK" secondAttribute="trailing" constant="16" id="2bb-za-xmd"/>
+                            <constraint firstItem="5dz-JH-FVi" firstAttribute="top" secondItem="CrA-Fr-mZc" secondAttribute="bottom" id="4Zu-xG-8Ud"/>
+                            <constraint firstItem="Vny-yM-IOK" firstAttribute="top" secondItem="Hmx-6U-gnF" secondAttribute="top" constant="40" id="BHa-qA-1UW"/>
+                            <constraint firstItem="Vny-yM-IOK" firstAttribute="leading" secondItem="Hmx-6U-gnF" secondAttribute="leading" constant="16" id="D0L-sq-UwB"/>
+                            <constraint firstItem="CrA-Fr-mZc" firstAttribute="top" secondItem="Vny-yM-IOK" secondAttribute="bottom" constant="20" id="QAc-Nr-AEl"/>
+                            <constraint firstItem="Vny-yM-IOK" firstAttribute="centerX" secondItem="yhk-ew-H4w" secondAttribute="centerX" id="RA3-lc-3vc"/>
+                            <constraint firstItem="5dz-JH-FVi" firstAttribute="leading" secondItem="Hmx-6U-gnF" secondAttribute="leading" constant="16" id="XWs-MA-OmL"/>
+                            <constraint firstItem="Hmx-6U-gnF" firstAttribute="trailing" secondItem="5dz-JH-FVi" secondAttribute="trailing" constant="16" id="hhB-zl-0dO"/>
+                            <constraint firstItem="CrA-Fr-mZc" firstAttribute="leading" secondItem="Hmx-6U-gnF" secondAttribute="leading" constant="16" id="lfc-YZ-OM4"/>
+                            <constraint firstItem="Hmx-6U-gnF" firstAttribute="trailing" secondItem="CrA-Fr-mZc" secondAttribute="trailing" constant="16" id="uCi-4b-eBv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hmx-6U-gnF"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detalle de la fuente" id="aFf-X8-g01">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="G0o-dY-4fC">
+                            <connections>
+                                <action selector="buttonDonePressed:" destination="cLB-6t-p0d" id="rlY-zA-QMs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="labelTitle" destination="Vny-yM-IOK" id="d2S-iZ-HNS"/>
+                        <outlet property="pickerFonts" destination="5dz-JH-FVi" id="QiM-N0-xU6"/>
+                        <outlet property="textView" destination="CrA-Fr-mZc" id="IN6-8C-LRT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m7j-J8-yp0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2655.1999999999998" y="1118.7192118226601"/>
         </scene>
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
@@ -260,6 +330,24 @@ de fibonacci quieres ver</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-436" y="-1"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Qbw-Ra-gC7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oxP-eZ-KVV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="04w-FR-y2G">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cLB-6t-p0d" kind="relationship" relationship="rootViewController" id="0hg-ar-MM9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="luh-UQ-dCI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1712.8" y="1118.7192118226601"/>
         </scene>
     </scenes>
     <resources>

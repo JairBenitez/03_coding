@@ -24,7 +24,6 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         fontFamilies = UIFont.familyNames.sorted(by: { $1 > $0 } )
         
         for fam in fontFamilies {
-            print( fam )
             fonts[fam] = UIFont.fontNames(forFamilyName: fam)
         }
         
@@ -32,15 +31,24 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "ShowFontsForFamily" {
+            
+            let navController = segue.destination as! UINavigationController
+            let destinationVC = navController.topViewController as! FontDetailsViewController
+            let idx = self.tableView.indexPathForSelectedRow!.row
+            
+            destinationVC.familyName = fontFamilies[idx]
+            destinationVC.fonts = fonts[fontFamilies[idx]]!
+        }
+        
     }
-    */
+    
     
     // MARK: - Metodos de protocolo UITableViewdataSource
     
@@ -64,5 +72,17 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
+    
+    // MARK: - Métodos de UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        let family = fontFamilies[row]
+        let familyFonts = fonts[family]!
+        
+        print( familyFonts )
+        
+    }
+ 
 
 }
